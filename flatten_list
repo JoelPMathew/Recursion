@@ -1,0 +1,10 @@
+def flatten(L):
+    # Base case: empty list
+    if len(L)==0:
+        return []
+    
+    if type(L[0])==list:
+        return flatten(L[0]) + flatten(L[1:])
+    else:
+        
+        return [L[0]] + flatten(L[1:])
